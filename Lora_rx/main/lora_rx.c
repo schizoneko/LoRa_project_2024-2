@@ -4,8 +4,9 @@
 #include "freertos/task.h"
 #include "esp_log.h"
 #include "lora.h"
-#include "sdkconfig.h"
 #include "driver/gpio.h"
+#include "driver/i2c.h"
+#include "lora_logo.h"
 
 //Oled hien thi thong so
 #include "lcd/oled_ssd1306.h"
@@ -18,6 +19,8 @@
 #define LED_PIN          27
 #define NORMAL_CONTRAST  UINT8_C(0x7F)
 #define LORA_RX_FREQ     433e6 //433MHz
+#define SSD1306_ADDR     INT8_C(0x3C) //Dia chi I2C chi co 7-bit
+
 TaskHandle_t lora_rx_handle_task = NULL;
 TaskHandle_t oled_display_handle_task = NULL;
 uint8_t char_buf[256];
@@ -51,22 +54,47 @@ void params_display(void){
 
 }
 
-//Chay ham nay thanh 1 task rieng de giao dien hien thi muot hon 
+void __attribute__((unused))welcome_display(void){
+  ssd1306_clearScreen();
+
+  ssd1306_printFixed(35, 0, "HNL - TEAM", STYLE_BOLD);
+  ssd1306_printFixed(20, 50, "LOW ENERGY LORA", STYLE_NORMAL);
+  ssd1306_drawBitmap((128 - STAR_WIDTH) / 2, ((64 - STAR_HEIGHT) / 2) / 8, STAR_WIDTH, STAR_HEIGHT, star_logo);
+  vTaskDelay(pdMS_TO_TICKS(2000));
+} 
+
+//Ham hien thi oled, neu trong 5s khong co tin hieu moi -> display off
 void oled_display_task(void *pvParameter){
+  const TickType_t timeout_ticks = pdMS_TO_TICKS(5000); 
+  TickType_t last_update = xTaskGetTickCount();
+  bool is_display_on = true;  
+
   while(true){
     if(isNewData){
       isNewData = false;
       params_display();
+      last_update = xTaskGetTickCount();
+
+      if(!is_display_on){ //Neu man hinh dang tat
+        ssd1306_displayOn();
+        is_display_on = true;
+      }
+    }else{
+      if(is_display_on && (xTaskGetTickCount() - last_update > timeout_ticks)){
+        ssd1306_displayOff();
+        is_display_on = false;
+      }
     }
     vTaskDelay(pdMS_TO_TICKS(100));
   }
 }
 
-void oled_i2c_init(void){
-  ssd1306_128x64_i2c_initEx(SCL_PIN, SDA_PIN, 0x3C); //0x3C dia chi i2c cua SSD1306
-  ssd1306_setFixedFont(ssd1306xled_font6x8);
+int oled_i2c_init(void){
+  ssd1306_128x64_i2c_initEx(SCL_PIN, SDA_PIN, SSD1306_ADDR); //Dung ham nay thi khong scan duoc I2C (?)
   ssd1306_setContrast(NORMAL_CONTRAST);
-  ssd1306_displayOn(); //Bat man hinh
+  ssd1306_setFixedFont(ssd1306xled_font6x8);
+
+  return 1;
 }
 
 void led_init(void){
@@ -124,9 +152,9 @@ void lora_rx_init(){
     band_width = CONFIG_BANDWIDTH;
     spreading_factor = CONFIG_SF_RATE;
   #endif
-  
+
   lora_enable_crc();
-  
+
   lora_set_frequency(LORA_RX_FREQ); //Set tan so 
   ESP_LOGI(pcTaskGetName(NULL), "Frequency is 433MHz !");
 
@@ -138,12 +166,21 @@ void lora_rx_init(){
 
   lora_set_spreading_factor(spreading_factor);
   ESP_LOGI(pcTaskGetName(NULL), "spreading factor = %d", spreading_factor);
+
+  vTaskDelay(pdMS_TO_TICKS(10));
 }
   
 void app_main(void){  
   lora_rx_init();
-  oled_i2c_init(); ///Khoi tao cho man hinh i2c
   led_init();
+
+  const int err = oled_i2c_init(); ///Khoi tao cho man hinh i2c
+  if(err == 1){
+    ESP_LOGI(pcTaskGetName(NULL), "OLED intialized OK !");
+    ssd1306_displayOn();
+    welcome_display();
+  }
+
   xTaskCreatePinnedToCore(lora_rx, "lora receiver", 1024 * 3, NULL, 1, &lora_rx_handle_task, 0);
   xTaskCreatePinnedToCore(oled_display_task, "oled display", 1024 * 3, NULL, 1, &oled_display_handle_task, 1);
 }
