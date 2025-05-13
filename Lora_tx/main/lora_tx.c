@@ -20,6 +20,7 @@ void lora_tx(void *pvParameters){
     int send_len = sprintf((char*)char_buf, "Hello World %"PRIu32, nowTick); //Ghi vao chuoi ky tu char_buf dang [Hello World!!! +ms]
     lora_send_packet(char_buf, send_len);
 
+    //Do cau hinh CONFIG_TICK_RATE_HZ dang de la 100Hz => 1 tick = 10ms => delay 2000ms ~ 200ms
     ESP_LOGI(pcTaskGetName(NULL), "%d bytes packet sent, tx_time: %"PRIu32, send_len, nowTick);
     vTaskDelay(pdMS_TO_TICKS(2000)); //Delay 2s roi gui tiep (1s la loi data vi time xu ly ngan)
   } 

@@ -119,9 +119,10 @@ void lora_rx(void *pvParameter){
       lastest_rx_len = lora_receive_packet(char_buf, sizeof(char_buf));
       isNewData = true;
 
-      ESP_LOGI(pcTaskGetName(NULL), "%d bytes packet received: [%.*s], RSSI: %d, SNR: %f, CR:%d", 
-              lastest_rx_len, lastest_rx_len, char_buf, lastest_rssi, lastest_snr, lastest_cr);
+      // ESP_LOGI(pcTaskGetName(NULL), "%d[%.*s],RSSI:%d,SNR:%f,CR:%d", 
+      //         lastest_rx_len, lastest_rx_len, char_buf, lastest_rssi, lastest_snr, lastest_cr);
 
+      printf("%d[%.*s],RSSI:%d,SNR:%f,CR:%d",lastest_rx_len, lastest_rx_len, char_buf, lastest_rssi, lastest_snr, lastest_cr);
       gpio_set_level(LED_PIN, HIGH);
       vTaskDelay(pdMS_TO_TICKS(100));
       gpio_set_level(LED_PIN, LOW);
