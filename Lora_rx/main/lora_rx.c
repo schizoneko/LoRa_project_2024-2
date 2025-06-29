@@ -51,7 +51,6 @@ void params_display(void){
   //Hien thi CR
   snprintf(line_buf, sizeof(line_buf), "CR: %d", lastest_cr);
   ssd1306_printFixed(0, 60, line_buf, STYLE_NORMAL);
-
 }
 
 void __attribute__((unused))welcome_display(void){
@@ -122,7 +121,7 @@ void lora_rx(void *pvParameter){
       // ESP_LOGI(pcTaskGetName(NULL), "%d[%.*s],RSSI:%d,SNR:%f,CR:%d", 
       //         lastest_rx_len, lastest_rx_len, char_buf, lastest_rssi, lastest_snr, lastest_cr);
 
-      printf("%d[%.*s],RSSI:%d,SNR:%f,CR:%d",lastest_rx_len, lastest_rx_len, char_buf, lastest_rssi, lastest_snr, lastest_cr);
+      printf("%d[%.*s],RSSI:%d,SNR:%f,CR:%d\n",lastest_rx_len, lastest_rx_len, char_buf, lastest_rssi, lastest_snr, lastest_cr);
       gpio_set_level(LED_PIN, HIGH);
       vTaskDelay(pdMS_TO_TICKS(100));
       gpio_set_level(LED_PIN, LOW);

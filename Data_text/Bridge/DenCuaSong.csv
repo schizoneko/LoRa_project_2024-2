@@ -1,0 +1,134 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15716
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+I (31) boot: ESP-IDF v5.4-dirty 2nd stage bootloader
+I (31) boot: compile time Apr 28 2025 01:53:04
+I (31) boot: Multicore bootloader
+I (33) boot: chip revision: v3.1
+I (36) boot.esp32: SPI Speed      : 40MHz
+I (39) boot.esp32: SPI Mode       : DIO
+I (43) boot.esp32: SPI Flash Size : 4MB
+I (47) boot: Enabling RNG early entropy source...
+I (51) boot: Partition Table:
+I (54) boot: ## Label            Usage          Type ST Offset   Length
+I (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+I (80) boot: End of partition table
+I (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be28h ( 48680) map
+I (107) esp_image: segment 1: paddr=0001be50 vaddr=3ff80000 size=0001ch (    28) load
+I (107) esp_image: segment 2: paddr=0001be74 vaddr=3ffb0000 size=023c8h (  9160) load
+I (114) esp_image: segment 3: paddr=0001e244 vaddr=40080000 size=01dd4h (  7636) load
+I (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1bd04h (113924) map
+I (165) esp_image: segment 5: paddr=0003bd2c vaddr=40081dd4 size=0d7c4h ( 55236) load
+I (194) boot: Loaded app from partition at offset 0x10000
+I (194) boot: Disabling RNG early entropy source...
+I (204) cpu_start: Multicore app
+I (213) cpu_start: Pro cpu start user code
+I (213) cpu_start: cpu freq: 160000000 Hz
+I (213) app_init: Application information:
+I (213) app_init: Project name:     Lora_rx
+I (217) app_init: App version:      4e45628
+I (220) app_init: Compile time:     Jun  1 2025 11:15:13
+I (226) app_init: ELF file SHA256:  9130b0999...
+I (230) app_init: ESP-IDF:          v5.4-dirty
+I (234) efuse_init: Min chip rev:     v3.1
+I (238) efuse_init: Max chip rev:     v3.99 
+I (242) efuse_init: Chip rev:         v3.1
+I (246) heap_init: Initializing. RAM available for dynamic allocation:
+I (252) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (257) heap_init: At 3FFB3230 len 0002CDD0 (179 KiB): DRAM
+I (262) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (268) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (273) heap_init: At 4008F598 len 00010A68 (66 KiB): IRAM
+I (280) spi_flash: detected chip: generic
+I (282) spi_flash: flash io: dio
+W (285) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (296) main_task: Started on CPU0
+I (306) main_task: Calling app_main()
+I (306) gpio: GPIO[16]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (306) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (326) main: Frequency is 433MHz !
+I (326) main: coding rate = 3
+I (326) main: bandwidth = 7
+I (326) main: spreading factor = 12
+I (336) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (336) main: OLED intialized OK !
+I (2406) main_task: Returned from app_main()
+I (2406) LORA: Receiving...!
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15716
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+I (31) boot: ESP-IDF v5.4-dirty 2nd stage bootloader
+I (31) boot: compile time Apr 28 2025 01:53:04
+I (31) boot: Multicore bootloader
+I (33) boot: chip revision: v3.1
+I (36) boot.esp32: SPI Speed      : 40MHz
+I (39) boot.esp32: SPI Mode       : DIO
+I (43) boot.esp32: SPI Flash Size : 4MB
+I (47) boot: Enabling RNG early entropy source...
+I (51) boot: Partition Table:
+I (54) boot: ## Label            Usage          Type ST Offset   Length
+I (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+I (80) boot: End of partition table
+I (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be28h ( 48680) map
+I (107) esp_image: segment 1: paddr=0001be50 vaddr=3ff80000 size=0001ch (    28) load
+I (107) esp_image: segment 2: paddr=0001be74 vaddr=3ffb0000 size=023c8h (  9160) load
+I (114) esp_image: segment 3: paddr=0001e244 vaddr=40080000 size=01dd4h (  7636) load
+I (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1bd04h (113924) map
+I (165) esp_image: segment 5: paddr=0003bd2c vaddr=40081dd4 size=0d7c4h ( 55236) load
+I (194) boot: Loaded app from partition at offset 0x10000
+I (194) boot: Disabling RNG early entropy source...
+I (204) cpu_start: Multicore app
+I (213) cpu_start: Pro cpu start user code
+I (213) cpu_start: cpu freq: 160000000 Hz
+I (213) app_init: Application information:
+I (213) app_init: Project name:     Lora_rx
+I (217) app_init: App version:      4e45628
+I (221) app_init: Compile time:     Jun  1 2025 11:15:13
+I (226) app_init: ELF file SHA256:  9130b0999...
+I (230) app_init: ESP-IDF:          v5.4-dirty
+I (234) efuse_init: Min chip rev:     v3.1
+I (238) efuse_init: Max chip rev:     v3.99 
+I (242) efuse_init: Chip rev:         v3.1
+I (246) heap_init: Initializing. RAM available for dynamic allocation:
+I (252) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
+I (257) heap_init: At 3FFB3230 len 0002CDD0 (179 KiB): DRAM
+I (262) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
+I (268) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
+I (273) heap_init: At 4008F598 len 00010A68 (66 KiB): IRAM
+I (280) spi_flash: detected chip: generic
+I (282) spi_flash: flash io: dio
+W (285) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
+I (296) main_task: Started on CPU0
+I (306) main_task: Calling app_main()
+I (306) gpio: GPIO[16]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (306) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (326) main: Frequency is 433MHz !
+I (326) main: coding rate = 3
+I (326) main: bandwidth = 7
+I (326) main: spreading factor = 12
+I (336) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
+I (336) main: OLED intialized OK !
+I (2406) main_task: Returned from app_main()
+I (2406) LORA: Receiving...!
