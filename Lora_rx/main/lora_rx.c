@@ -118,9 +118,6 @@ void lora_rx(void *pvParameter){
       lastest_rx_len = lora_receive_packet(char_buf, sizeof(char_buf));
       isNewData = true;
 
-      // ESP_LOGI(pcTaskGetName(NULL), "%d[%.*s],RSSI:%d,SNR:%f,CR:%d", 
-      //         lastest_rx_len, lastest_rx_len, char_buf, lastest_rssi, lastest_snr, lastest_cr);
-
       printf("%d[%.*s],RSSI:%d,SNR:%f,CR:%d\n",lastest_rx_len, lastest_rx_len, char_buf, lastest_rssi, lastest_snr, lastest_cr);
       gpio_set_level(LED_PIN, HIGH);
       vTaskDelay(pdMS_TO_TICKS(100));
@@ -143,6 +140,7 @@ void lora_rx_init(){
    * + Toc do du lieu (CR cao -> toc do thap nhung dang tin cay hon)
    * + Khoang cach truyen (CR cao -> truyen xa hon nhung ton bang thong hon)
    */
+  
   int coding_rate = 3; 
   int band_width = 7; 
   int spreading_factor = 12;

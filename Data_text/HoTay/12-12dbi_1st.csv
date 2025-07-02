@@ -1,69 +1,70 @@
-I (9546) lora receiver: 13 bytes packet received: [Hello World 4], RSSI: -117, SNR: -11.250000, CR:3
-I (12726) lora receiver: 15 bytes packet received: [Hello World 322], RSSI: -115, SNR: -12.750000, CR:3
-I (14726) lora receiver: 15 bytes packet received: [Hello World 522], RSSI: -112, SNR: -14.750000, CR:3
-I (16726) lora receiver: 15 bytes packet received: [Hello World 722], RSSI: -116, SNR: -12.000000, CR:3
-I (18726) lora receiver: 15 bytes packet received: [Hello World 922], RSSI: -114, SNR: -12.000000, CR:3
-I (20726) lora receiver: 16 bytes packet received: [Hello World 1122], RSSI: -115, SNR: -6.500000, CR:3
-I (22726) lora receiver: 16 bytes packet received: [Hello World 1322], RSSI: -118, SNR: -12.000000, CR:3
-I (24726) lora receiver: 16 bytes packet received: [Hello World 1522], RSSI: -118, SNR: -9.250000, CR:3
-I (26726) lora receiver: 16 bytes packet received: [Hello World 1722], RSSI: -118, SNR: -8.250000, CR:3
-I (28726) lora receiver: 16 bytes packet received: [Hello World 1922], RSSI: -116, SNR: -11.250000, CR:3
-I (30726) lora receiver: 16 bytes packet received: [Hello World 2122], RSSI: -115, SNR: -15.500000, CR:3
-I (34726) lora receiver: 16 bytes packet received: [Hello World 2522], RSSI: -117, SNR: -11.750000, CR:3
-I (36726) lora receiver: 16 bytes packet received: [Hello World 2722], RSSI: -116, SNR: -4.750000, CR:3
-I (38726) lora receiver: 16 bytes packet received: [Hello World 2922], RSSI: -118, SNR: -14.500000, CR:3
-I (40726) lora receiver: 16 bytes packet received: [Hello World 3122], RSSI: -118, SNR: -6.000000, CR:3
-I (42726) lora receiver: 16 bytes packet received: [Hello World 3322], RSSI: -116, SNR: -12.500000, CR:3
-I (44726) lora receiver: 16 bytes packet received: [Hello World 3522], RSSI: -118, SNR: -10.500000, CR:3
-I (46726) lora receiver: 16 bytes packet received: [Hello World 3722], RSSI: -118, SNR: -13.750000, CR:3
-I (48726) lora receiver: 16 bytes packet received: [Hello World 3922], RSSI: -113, SNR: -9.250000, CR:3
-I (50726) lora receiver: 16 bytes packet received: [Hello World 4122], RSSI: -115, SNR: -6.750000, CR:3
-I (52726) lora receiver: 16 bytes packet received: [Hello World 4322], RSSI: -115, SNR: -6.000000, CR:3
-I (54726) lora receiver: 16 bytes packet received: [Hello World 4522], RSSI: -116, SNR: -9.500000, CR:3
-I (56726) lora receiver: 16 bytes packet received: [Hello World 4722], RSSI: -117, SNR: -9.000000, CR:3
-I (58726) lora receiver: 16 bytes packet received: [Hello World 4922], RSSI: -117, SNR: -5.250000, CR:3
-I (60726) lora receiver: 16 bytes packet received: [Hello World 5122], RSSI: -118, SNR: -5.250000, CR:3
-I (62726) lora receiver: 16 bytes packet received: [Hello World 5322], RSSI: -116, SNR: -5.250000, CR:3
-I (64726) lora receiver: 16 bytes packet received: [Hello World 5522], RSSI: -117, SNR: -6.250000, CR:3
-I (66726) lora receiver: 16 bytes packet received: [Hello World 5722], RSSI: -118, SNR: -10.000000, CR:3
-I (68726) lora receiver: 16 bytes packet received: [Hello World 5922], RSSI: -120, SNR: -15.250000, CR:3
-I (70726) lora receiver: 16 bytes packet received: [Hello World 6122], RSSI: -118, SNR: -10.750000, CR:3
-I (72726) lora receiver: 16 bytes packet received: [Hello World 6322], RSSI: -117, SNR: -8.000000, CR:3
-I (74726) lora receiver: 16 bytes packet received: [Hello World 6522], RSSI: -118, SNR: -6.250000, CR:3
-I (76726) lora receiver: 16 bytes packet received: [Hello World 6722], RSSI: -117, SNR: -9.750000, CR:3
-I (78726) lora receiver: 16 bytes packet received: [Hello World 6922], RSSI: -118, SNR: -11.750000, CR:3
-I (80726) lora receiver: 16 bytes packet received: [Hello World 7122], RSSI: -119, SNR: -10.000000, CR:3
-I (82726) lora receiver: 16 bytes packet received: [Hello World 7322], RSSI: -119, SNR: -9.250000, CR:3
-I (84726) lora receiver: 16 bytes packet received: [Hello World 7522], RSSI: -119, SNR: -13.500000, CR:3
-I (86726) lora receiver: 16 bytes packet received: [Hello World 7722], RSSI: -118, SNR: -15.000000, CR:3
-I (88726) lora receiver: 16 bytes packet received: [Hello World 7922], RSSI: -117, SNR: -17.500000, CR:3
-I (90726) lora receiver: 16 bytes packet received: [Hello World 8122], RSSI: -118, SNR: -10.500000, CR:3
-I (92726) lora receiver: 16 bytes packet received: [Hello World 8322], RSSI: -117, SNR: -7.750000, CR:3
-I (94726) lora receiver: 16 bytes packet received: [Hello World 8522], RSSI: -115, SNR: -10.500000, CR:3
-I (96726) lora receiver: 16 bytes packet received: [Hello World 8722], RSSI: -119, SNR: -13.500000, CR:3
-I (98726) lora receiver: 16 bytes packet received: [Hello World 8922], RSSI: -119, SNR: -18.250000, CR:3
-I (100726) lora receiver: 16 bytes packet received: [Hello World 9122], RSSI: -116, SNR: -16.250000, CR:3
-I (102726) lora receiver: 16 bytes packet received: [Hello World 9322], RSSI: -118, SNR: -20.000000, CR:3
-I (104726) lora receiver: 16 bytes packet received: [Hello World 9522], RSSI: -118, SNR: -13.750000, CR:3
-I (106726) lora receiver: 16 bytes packet received: [Hello World 9722], RSSI: -119, SNR: -17.000000, CR:3
-I (108726) lora receiver: 16 bytes packet received: [Hello World 9922], RSSI: -119, SNR: -12.250000, CR:3
-I (110726) lora receiver: 17 bytes packet received: [Hello World 10122], RSSI: -114, SNR: -19.500000, CR:3
-I (114726) lora receiver: 17 bytes packet received: [Hello World 10522], RSSI: -120, SNR: -8.750000, CR:3
-I (116726) lora receiver: 17 bytes packet received: [Hello World 10722], RSSI: -117, SNR: -3.250000, CR:3
-I (118726) lora receiver: 17 bytes packet received: [Hello World 10922], RSSI: -117, SNR: -5.000000, CR:3
-I (120726) lora receiver: 17 bytes packet received: [Hello World 11122], RSSI: -114, SNR: -4.750000, CR:3
-I (122726) lora receiver: 17 bytes packet received: [Hello World 11322], RSSI: -116, SNR: -5.750000, CR:3
-I (124726) lora receiver: 17 bytes packet received: [Hello World 11522], RSSI: -117, SNR: -6.000000, CR:3
-I (126726) lora receiver: 17 bytes packet received: [Hello World 11722], RSSI: -116, SNR: -10.250000, CR:3
-I (128726) lora receiver: 17 bytes packet received: [Hello World 11922], RSSI: -117, SNR: -12.750000, CR:3
-I (130726) lora receiver: 17 bytes packet received: [Hello World 12122], RSSI: -115, SNR: -9.500000, CR:3
-I (132726) lora receiver: 17 bytes packet received: [Hello World 12322], RSSI: -117, SNR: -8.000000, CR:3
-I (134726) lora receiver: 17 bytes packet received: [Hello World 12522], RSSI: -117, SNR: -12.000000, CR:3
-I (136726) lora receiver: 17 bytes packet received: [Hello World 12722], RSSI: -118, SNR: -14.750000, CR:3
-I (138726) lora receiver: 17 bytes packet received: [Hello World 12922], RSSI: -118, SNR: -11.750000, CR:3
-I (140726) lora receiver: 17 bytes packet received: [Hello World 13122], RSSI: -115, SNR: -12.500000, CR:3
-I (142726) lora receiver: 17 bytes packet received: [Hello World 13322], RSSI: -117, SNR: -8.500000, CR:3
-I (144726) lora receiver: 17 bytes packet received: [Hello World 13522], RSSI: -118, SNR: -10.250000, CR:3
-I (146726) lora receiver: 17 bytes packet received: [Hello World 13722], RSSI: -117, SNR: -10.000000, CR:3
-I (148726) lora receiver: 17 bytes packet received: [Hello World 13922], RSSI: -117, SNR: -11.500000, CR:3
-I (152726) lora receiver: 17 bytes packet received: [Hello World 14322], RSSI: -118, SNR: -13.250000, CR:3
+Bytes,Time,RSSI,SNR
+13,4,-117,-11.25000
+15,322,-115,-12.750000
+15,522,-112,-14.750000
+15,722,-116,-12.000000
+15,922,-114,-12.000000
+16,1122,-115,-6.500000
+16,1322,-118,-12.000000
+16,1522,-118,-9.250000
+16,1722,-118,-8.250000
+16,1922,-116,-11.250000
+16,2122,-115,-15.500000
+16,2522,-117,-11.750000
+16,2722,-116,-4.750000
+16,2922,-118,-14.500000
+16,3122,-118,-6.000000
+16,3322,-116,-12.500000
+16,3522,-118,-10.500000
+16,3722,-118,-13.750000
+16,3922,-113,-9.250000
+16,4122,-115,-6.750000
+16,4322,-115,-6.000000
+16,4522,-116,-9.500000
+16,4722,-117,-9.000000
+16,4922,-117,-5.250000
+16,5122,-118,-5.250000
+16,5322,-116,-5.250000
+16,5522,-117,-6.250000
+16,5722,-118,-10.000000
+16,5922,-120,-15.250000
+16,6122,-118,-10.750000
+16,6322,-117,-8.000000
+16,6522,-118,-6.250000
+16,6722,-117,-9.750000
+16,6922,-118,-11.750000
+16,7122,-119,-10.000000
+16,7322,-119,-9.250000
+16,7522,-119,-13.500000
+16,7722,-118,-15.000000
+16,7922,-117,-17.500000
+16,8122,-118,-10.500000
+16,8322,-117,-7.750000
+16,8522,-115,-10.500000
+16,8722,-119,-13.500000
+16,8922,-119,-18.250000
+16,9122,-116,-16.250000
+16,9322,-118,-20.000000
+16,9522,-118,-13.750000
+16,9722,-119,-17.000000
+16,9922,-119,-12.250000
+17,10122,-114,-19.500000
+17,10522,-120,-8.750000
+17,10722,-117,-3.250000
+17,10922,-117,-5.000000
+17,11122,-114,-4.750000
+17,11322,-116,-5.750000
+17,11522,-117,-6.000000
+17,11722,-116,-10.250000
+17,11922,-117,-12.750000
+17,12122,-115,-9.500000
+17,12322,-117,-8.000000
+17,12522,-117,-12.000000
+17,12722,-118,-14.750000
+17,12922,-118,-11.750000
+17,13122,-115,-12.500000
+17,13322,-117,-8.500000
+17,13522,-118,-10.250000
+17,13722,-117,-10.000000
+17,13922,-117,-11.500000
+17,14322,-118,-13.250000

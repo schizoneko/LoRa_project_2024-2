@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # Đọc file
-df = pd.read_csv(r"D:\Esp-idf\LoRa_project\Data_text\KichBan_4\Luc_di.csv")
+df = pd.read_csv(r"D:\Esp-idf\LoRa_project\Data_text\Bridge\test1_4km.csv")
 
 # Xử lý tên cột tránh lỗi (loại bỏ khoảng trắng nếu có)
 df.columns = df.columns.str.strip()
