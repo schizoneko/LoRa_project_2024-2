@@ -1,134 +1,77 @@
-ets Jul 29 2019 12:21:46
-
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0030,len:6276
-load:0x40078000,len:15716
-load:0x40080400,len:4
-ho 8 tail 4 room 4
-load:0x40080404,len:3860
-entry 0x4008063c
-I (31) boot: ESP-IDF v5.4-dirty 2nd stage bootloader
-I (31) boot: compile time Apr 28 2025 01:53:04
-I (31) boot: Multicore bootloader
-I (33) boot: chip revision: v3.1
-I (36) boot.esp32: SPI Speed      : 40MHz
-I (39) boot.esp32: SPI Mode       : DIO
-I (43) boot.esp32: SPI Flash Size : 4MB
-I (47) boot: Enabling RNG early entropy source...
-I (51) boot: Partition Table:
-I (54) boot: ## Label            Usage          Type ST Offset   Length
-I (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000
-I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
-I (73) boot:  2 factory          factory app      00 00 00010000 00100000
-I (80) boot: End of partition table
-I (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be28h ( 48680) map
-I (107) esp_image: segment 1: paddr=0001be50 vaddr=3ff80000 size=0001ch (    28) load
-I (107) esp_image: segment 2: paddr=0001be74 vaddr=3ffb0000 size=023c8h (  9160) load
-I (114) esp_image: segment 3: paddr=0001e244 vaddr=40080000 size=01dd4h (  7636) load
-I (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1bd04h (113924) map
-I (165) esp_image: segment 5: paddr=0003bd2c vaddr=40081dd4 size=0d7c4h ( 55236) load
-I (194) boot: Loaded app from partition at offset 0x10000
-I (194) boot: Disabling RNG early entropy source...
-I (204) cpu_start: Multicore app
-I (213) cpu_start: Pro cpu start user code
-I (213) cpu_start: cpu freq: 160000000 Hz
-I (213) app_init: Application information:
-I (213) app_init: Project name:     Lora_rx
-I (217) app_init: App version:      4e45628
-I (220) app_init: Compile time:     Jun  1 2025 11:15:13
-I (226) app_init: ELF file SHA256:  9130b0999...
-I (230) app_init: ESP-IDF:          v5.4-dirty
-I (234) efuse_init: Min chip rev:     v3.1
-I (238) efuse_init: Max chip rev:     v3.99 
-I (242) efuse_init: Chip rev:         v3.1
-I (246) heap_init: Initializing. RAM available for dynamic allocation:
-I (252) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
-I (257) heap_init: At 3FFB3230 len 0002CDD0 (179 KiB): DRAM
-I (262) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
-I (268) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
-I (273) heap_init: At 4008F598 len 00010A68 (66 KiB): IRAM
-I (280) spi_flash: detected chip: generic
-I (282) spi_flash: flash io: dio
-W (285) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
-I (296) main_task: Started on CPU0
-I (306) main_task: Calling app_main()
-I (306) gpio: GPIO[16]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
-I (306) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
-I (326) main: Frequency is 433MHz !
-I (326) main: coding rate = 3
-I (326) main: bandwidth = 7
-I (326) main: spreading factor = 12
-I (336) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
-I (336) main: OLED intialized OK !
-I (2406) main_task: Returned from app_main()
-I (2406) LORA: Receiving...!
-ets Jul 29 2019 12:21:46
-
-rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
-configsip: 0, SPIWP:0xee
-clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
-mode:DIO, clock div:2
-load:0x3fff0030,len:6276
-load:0x40078000,len:15716
-load:0x40080400,len:4
-ho 8 tail 4 room 4
-load:0x40080404,len:3860
-entry 0x4008063c
-I (31) boot: ESP-IDF v5.4-dirty 2nd stage bootloader
-I (31) boot: compile time Apr 28 2025 01:53:04
-I (31) boot: Multicore bootloader
-I (33) boot: chip revision: v3.1
-I (36) boot.esp32: SPI Speed      : 40MHz
-I (39) boot.esp32: SPI Mode       : DIO
-I (43) boot.esp32: SPI Flash Size : 4MB
-I (47) boot: Enabling RNG early entropy source...
-I (51) boot: Partition Table:
-I (54) boot: ## Label            Usage          Type ST Offset   Length
-I (60) boot:  0 nvs              WiFi data        01 02 00009000 00006000
-I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
-I (73) boot:  2 factory          factory app      00 00 00010000 00100000
-I (80) boot: End of partition table
-I (83) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0be28h ( 48680) map
-I (107) esp_image: segment 1: paddr=0001be50 vaddr=3ff80000 size=0001ch (    28) load
-I (107) esp_image: segment 2: paddr=0001be74 vaddr=3ffb0000 size=023c8h (  9160) load
-I (114) esp_image: segment 3: paddr=0001e244 vaddr=40080000 size=01dd4h (  7636) load
-I (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=1bd04h (113924) map
-I (165) esp_image: segment 5: paddr=0003bd2c vaddr=40081dd4 size=0d7c4h ( 55236) load
-I (194) boot: Loaded app from partition at offset 0x10000
-I (194) boot: Disabling RNG early entropy source...
-I (204) cpu_start: Multicore app
-I (213) cpu_start: Pro cpu start user code
-I (213) cpu_start: cpu freq: 160000000 Hz
-I (213) app_init: Application information:
-I (213) app_init: Project name:     Lora_rx
-I (217) app_init: App version:      4e45628
-I (221) app_init: Compile time:     Jun  1 2025 11:15:13
-I (226) app_init: ELF file SHA256:  9130b0999...
-I (230) app_init: ESP-IDF:          v5.4-dirty
-I (234) efuse_init: Min chip rev:     v3.1
-I (238) efuse_init: Max chip rev:     v3.99 
-I (242) efuse_init: Chip rev:         v3.1
-I (246) heap_init: Initializing. RAM available for dynamic allocation:
-I (252) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM
-I (257) heap_init: At 3FFB3230 len 0002CDD0 (179 KiB): DRAM
-I (262) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM
-I (268) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM
-I (273) heap_init: At 4008F598 len 00010A68 (66 KiB): IRAM
-I (280) spi_flash: detected chip: generic
-I (282) spi_flash: flash io: dio
-W (285) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`
-I (296) main_task: Started on CPU0
-I (306) main_task: Calling app_main()
-I (306) gpio: GPIO[16]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
-I (306) gpio: GPIO[15]| InputEn: 0| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
-I (326) main: Frequency is 433MHz !
-I (326) main: coding rate = 3
-I (326) main: bandwidth = 7
-I (326) main: spreading factor = 12
-I (336) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 
-I (336) main: OLED intialized OK !
-I (2406) main_task: Returned from app_main()
-I (2406) LORA: Receiving...!
+Bytes,Time,RSSI,SNR
+17,200,-123,-22.930907
+17,400,-122,-21.947307
+17,600,-124,-22.862318
+16,800,-119,-18.439881
+17,1000,-125,-24.761983
+0,1200,-117,-17.979295
+16,1400,-123,-22.147890
+16,1600,-122,-21.445502
+16,1800,-124,-21.827545
+16,2000,-122,-22.942325
+16,2200,-122,-22.390998
+17,2400,-121,-21.664904
+17,2600,-120,-21.824437
+16,2800,-125,-24.337916
+16,3000,-118,-18.417727
+16,3200,-123,-22.644101
+16,3400,-122,-22.710801
+16,3600,-119,-19.948323
+16,3800,-121,-21.476160
+16,4000,-120,-21.679713
+17,4200,-121,-21.497758
+17,4400,-119,-19.461530
+16,4600,-122,-24.128338
+16,4800,-120,-20.676287
+16,5000,-116,-15.557866
+16,5200,-118,-18.013249
+16,5400,-121,-21.541762
+16,5600,-123,-23.140247
+16,5800,-123,-25.000000
+16,6000,-118,-19.101079
+16,6200,-117,-17.186280
+17,6400,-119,-19.605147
+17,6600,-120,-19.519841
+17,6800,-122,-24.056529
+17,7000,-122,-25.000000
+16,7200,-116,-17.381613
+16,7400,-119,-19.952225
+16,7600,-122,-25.000000
+16,7800,-125,-25.000000
+16,8000,-123,-25.000000
+16,8200,-120,-22.207646
+16,8400,-119,-18.236394
+16,8600,-117,-10.000000
+16,8800,-123,-24.025164
+16,9000,-118,-20.132874
+16,9200,-120,-23.721389
+17,9400,-120,-20.624516
+17,9600,-123,-22.599507
+17,9800,-122,-22.410289
+17,10000,-120,-20.250000
+17,10200,-119,-18.649495
+17,10400,-121,-20.816720
+17,10600,-122,-21.021702
+17,10800,-122,-20.497987
+17,11000,-119,-19.704642
+17,11200,-120,-19.864900
+17,11400,-117,-18.644930
+17,11600,-121,-23.805088
+17,11800,-120,-20.972017
+17,12000,-121,-22.472418
+17,12200,-119,-19.948937
+17,12400,-117,-18.276339
+17,12600,-120,-20.124856
+17,12800,-121,-20.691610
+16,13000,-117,-17.371648
+16,13200,-118,-19.207900
+17,13400,-119,-17.070611
+17,13600,-118,-19.318514
+17,13800,-120,-21.800562
+17,14000,-119,-24.428607
+17,14200,-122,-28.000000
+17,14400,-119,-22.315761
+17,14600,-117,-17.900018
+17,14800,-116,-15.000000
+17,15000,-120,-20.389944
+17,15200,-119,-21.339010
